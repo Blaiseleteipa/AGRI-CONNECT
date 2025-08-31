@@ -1,41 +1,41 @@
-# 🌱 ZeroHunger Connect  
+🌱 AGRI-CONNECT
 
-## 📌 Overview
-**ZeroHunger Connect** is a hackathon project aligned with **UN SDG 2: Zero Hunger**.  
-It tackles **food production** and **distribution challenges** by:  
-- Helping farmers choose suitable crops for their region.  
-- Enabling food donors to connect with people in need.  
+AGRI-CONNECT is a hackathon project built under UN SDG 2: Zero Hunger.
+The platform empowers farmers with insights on suitable crops to grow based on their location, soil type, season, and weather patterns. It also creates a food distribution network by connecting people with surplus food to those in need, ensuring reduced waste and better food accessibility.
 
----
+🚀 Features
+🌾 Food Production Support
 
-## ✨ Features
+Farmer inputs location & soil type → System suggests best crops for the season.
 
-### 🌾 Food Production Support
-- 🌦️ **Weather & Climate Insights** – Get real-time weather and planting season data.  
-- 🌱 **Crop Recommendation System** – Suggests suitable crops based on soil, season, and climate.  
-- 👨‍🌾 **Farmer Dashboard** – Access expert tips and insights.  
+Provides weather insights and planting schedules.
 
-### 🍞 Food Distribution Network
-- 🍲 **Food Donor Platform** – Individuals/businesses with surplus food can list available supplies.  
-- 🏠 **Food Receiver Matching** – Connects surplus food donors with NGOs, orphanages, and vulnerable communities.  
-- 📍 **Geolocation Matching** – Matches donors and receivers by proximity.  
+Recommends expert farming tips to boost yield.
 
----
+🍽️ Food Distribution & Sharing
 
-## 🛠️ Tech Stack
-- **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** Python (Flask/Django)  
-- **Database:** MySQL  
-- **APIs:** Weather API (e.g., OpenWeatherMap), Maps API (optional)  
+Donors (individuals, restaurants, markets) can list surplus food.
 
----
+Receivers (families, schools, food banks) can request available food.
 
-## 🚀 How It Works
-1. **Farmers** input location & soil type → system recommends crops + planting season.  
-2. **Donors** register surplus food items.  
-3. **Receivers** search/request food.  
-4. **System** matches donor & receiver by location.  
+Matching system connects donors & receivers nearby.
 
----
+📊 Data Insights (Future Scope)
 
-## 📂 Project Structure
+Crop trends by region.
+
+Food demand vs. supply mapping.
+
+Alerts for food shortages or surpluses.
+
+🛠️ Tech Stack
+
+Frontend: HTML, CSS, JavaScript
+
+Backend: Python (Flask/Django)
+
+Database: MySQL
+
+APIs (optional): Weather API for real-time climate data
+
+Hosting (optional): GitHub Pages (frontend), Render/Heroku (backend)
