@@ -37,3 +37,53 @@ Backend: Python (Flask)
 Database: MySQL
 
 Optional APIs: Weather API for real-time data
+📂 Project Structure
+AGRI-CONNECT/
+│── Backend/
+│   ├── static/
+│   │   └── style.css
+│   ├── templates/
+│   │   └── index.html
+│   ├── app.py
+│
+│── Database/
+│   └── hackathon_db.sql
+│
+│── README.md
+│── .git/
+
+⚡ Getting Started
+
+Clone the repository
+
+git clone https://github.com/yourusername/AGRI-CONNECT.git
+cd AGRI-CONNECT/Backend
+
+
+Install dependencies
+
+pip install flask mysql-connector-python
+
+
+Run the backend
+
+python app.py
+
+
+Open in browser:
+
+http://127.0.0.1:5000
+
+🌍 Impact
+
+AGRI-CONNECT contributes to SDG 2: Zero Hunger by:
+
+Helping farmers make smarter crop choices.
+
+Reducing food waste through surplus sharing.
+
+Improving access to food for vulnerable communities.
+
+👥 Team
+
+Blaise Leteipa – Backend Developer
