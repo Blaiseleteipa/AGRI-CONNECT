@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGRI-CONNECT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-message">
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+    <header>
+        <nav>
+            <div class="logo">AGRI-CONNECT</div>
+            <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links" id="nav-links">
+                <a href="#home">Home</a>
+                
+                <a href="#food-sharing">Food Sharing</a>
+        
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <h1>Smart Farming &amp; Food Sharing for Zero Hunger</h1>
+            <p>Empowering farmers with technology and connecting communities to fight hunger together.</p>
+            <button class="cta-btn">Get Started</button>
+        </section>
+
+   <!-- Farmers Section -->
+    
+<section id="farmers">
+</section>
+<br>
+<h2>Farmers Area</h2>
+  <p>Enter your location to get recommendations on what to plant based on weather and soil conditions.</p>
+
+  <!-- Location form -->
+  <form action="/recommend" method="POST">
+    <label for="location">Your Location:</label>
+    <input type="text" id="location" name="location" placeholder="e.g. Nyeri, Kenya" required>
+    <button type="submit">Get Recommendations</button>
+  </form>
+</br>
+  </section>
+
+  <section>
+  <h2>Farmer Crop Recommendation</h2>
+  <form action="/recommend" method="POST">
+    <label for="county">Select Your County:</label>
+    <select id="county" name="county" required>
+      <option value="">-- Select County --</option>
+      <option value="Baringo">Baringo - Maize, Beans</option>
+      <option value="Bomet">Bomet - Tea, Maize, Potatoes</option>
+      <option value="Bungoma">Bungoma - Maize, Sugarcane</option>
+      <option value="Busia">Busia - Cassava, Maize</option>
+      <option value="Elgeyo-Marakwet">Elgeyo-Marakwet - Maize, Millet</option>
+      <option value="Embu">Embu - Coffee, Tea, Macadamia</option>
+      <option value="Garissa">Garissa - Livestock, Sorghum</option>
+      <option value="Homa Bay">Homa Bay - Maize, Sweet Potatoes</option>
+      <option value="Isiolo">Isiolo - Livestock, Sorghum</option>
+      <option value="Kajiado">Kajiado - Livestock, Maize</option>
+      <option value="Kakamega">Kakamega - Sugarcane, Maize</option>
+      <option value="Kericho">Kericho - Tea, Maize</option>
+      <option value="Kiambu">Kiambu - Coffee, Vegetables</option>
+      <option value="Kilifi">Kilifi - Cashew, Coconut, Cassava</option>
+      <option value="Kirinyaga">Kirinyaga - Rice, Coffee</option>
+      <option value="Kisii">Kisii - Bananas, Tea</option>
+      <option value="Kisumu">Kisumu - Rice, Maize</option>
+      <option value="Kitui">Kitui - Sorghum, Millet</option>
+      <option value="Kwale">Kwale - Coconut, Cashew</option>
+      <option value="Laikipia">Laikipia - Livestock, Maize</option>
+      <option value="Lamu">Lamu - Coconut, Cashew</option>
+      <option value="Machakos">Machakos - Maize, Sorghum</option>
+      <option value="Makueni">Makueni - Mangoes, Sorghum</option>
+      <option value="Mandera">Mandera - Livestock, Sorghum</option>
+      <option value="Marsabit">Marsabit - Livestock, Millet</option>
+      <option value="Meru">Meru - Miraa, Tea, Coffee</option>
+      <option value="Migori">Migori - Maize, Sugarcane</option>
+      <option value="Mombasa">Mombasa - Coconut, Cashew</option>
+      <option value="Murang'a">Murang'a - Coffee, Tea</option>
+      <option value="Nairobi">Nairobi - Vegetables, Urban farming</option>
+      <option value="Nakuru">Nakuru - Potatoes, Maize</option>
+      <option value="Nandi">Nandi - Tea, Maize</option>
+      <option value="Narok">Narok - Wheat, Maize</option>
+      <option value="Nyamira">Nyamira - Bananas, Tea</option>
+      <option value="Nyandarua">Nyandarua - Potatoes, Cabbage</option>
+      <option value="Nyeri">Nyeri - Coffee, Tea</option>
+      <option value="Samburu">Samburu - Livestock, Millet</option>
+      <option value="Siaya">Siaya - Cassava, Maize</option>
+      <option value="Taita-Taveta">Taita-Taveta - Tomatoes, Bananas</option>
+      <option value="Tana River">Tana River - Maize, Livestock</option>
+      <option value="Tharaka-Nithi">Tharaka-Nithi - Millet, Sorghum</option>
+      <option value="Trans Nzoia">Trans Nzoia - Maize, Beans</option>
+      <option value="Turkana">Turkana - Livestock, Sorghum</option>
+      <option value="Uasin Gishu">Uasin Gishu - Maize, Wheat</option>
+      <option value="Vihiga">Vihiga - Tea, Bananas</option>
+      <option value="Wajir">Wajir - Livestock, Sorghum</option>
+      <option value="West Pokot">West Pokot - Maize, Beans</option>
+    </select>
+    </section>
+    
+  </form>
+</section>
+
+
+   <section id="food-sharing">
+    <h2 class="section-title">Food Sharing</h2>
+    <div class="food-sharing-content">
+        <div class="food-sharing-info">
+            <p>
+                Donate surplus food and help connect it to those in need. Together, we can reduce food waste and support our community.
+            </p>
+        </div>
+
+        <!-- Donation form -->
+        <form class="food-sharing-form" action="/donate" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="Your Location" required>
+
+            <label for="food_amount">Amount of Food</label>
+            <input type="text" id="food_amount" name="food_amount" placeholder="e.g., 10kg rice" required>
+
+            <button type="submit">Donate Food</button>
+        </form>
+
+        <!-- Display donations dynamically -->
+        <h3>Previous Donations</h3>
+        <ul>
+            {% for donation in donations %}
+                <li>{{ donation[1] }} donated {{ donation[3] }} from {{ donation[2] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+
+        <section id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="contact-name" placeholder="Your Name" required>
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="contact-email" placeholder="you@example.com" required>
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="contact-message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>© AGRI-CONNECT</div>
+        <div class="footer-social">
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
