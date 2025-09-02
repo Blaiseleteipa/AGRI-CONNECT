@@ -39,3 +39,5 @@ Database: MySQL
 APIs (optional): Weather API for real-time climate data
 
 Hosting (optional): GitHub Pages (frontend), Render/Heroku (backend)
+NB KINDLY READ THE README PROVIDED IN THE Backend folder ON HOW TO USE IT
+
