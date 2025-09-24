@@ -56,7 +56,7 @@ AGRI-CONNECT/
 
 Clone the repository
 
-git clone https://github.com/yourusername/AGRI-CONNECT.git
+git clone https://github.com/Blaiseleteipa/AGRI-CONNECT.git
 cd AGRI-CONNECT/Backend
 
 
